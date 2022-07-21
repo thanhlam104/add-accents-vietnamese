@@ -1,4 +1,4 @@
 streamlit
 unidecode
 nltk==3.5
-pickle
+scikit-learn
