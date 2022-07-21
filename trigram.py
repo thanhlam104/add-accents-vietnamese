@@ -43,7 +43,7 @@ def remove_vn_accent(word):
 def gen_accents_word(word):
     word_no_accent = remove_vn_accent(word.lower())
     all_accent_word = {word}
-    for w in open('trigrams/vn_syllables.txt').read().splitlines():
+    for w in open('trigrams/vn_syllables.txt', encoding='utf8').read().splitlines():
         w_no_accent = remove_vn_accent(w.lower())
         if w_no_accent == word_no_accent:
             all_accent_word.add(w)
@@ -79,6 +79,6 @@ def trigram(_input):
 
     result = beam_search(_input.lower().split(), model_loaded)
 
-    return result
+    return detokenize(result[0][0])
 
 
