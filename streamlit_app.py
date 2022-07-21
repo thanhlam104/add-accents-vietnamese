@@ -6,6 +6,6 @@ if __name__=='__main__':
     instruction = 'Please enter the unaccented sentence'
     st.write(instruction)
     
-    input = st.text_input()
+    input = st.text_input("input")
 
     
